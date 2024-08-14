@@ -1,4 +1,97 @@
-.container-categorie {
+body {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+header div.container div ul.nav-menu li a.title {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+header div.container div ul.nav-menu li a {
+  color: #fff;
+}
+
+form.form-search {
+  display: flex;
+  gap: 1rem;
+}
+
+button.btn-search {
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+div span.cart-with-elements {
+  background-color: #ff0000;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  transition: all .2s ease-in;
+}
+
+div.container-cart-and-categories {
+  display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+
+.button-add-to-cart {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  width: 20rem;
+  font-size: 1rem;
+}
+
+.button-add-to-cart:hover {
+  filter: brightness(95%);
+}
+
+div.food-or-drink-options {
+  background-color: #ff4500;
+}
+
+.container-categorie {
   padding: 1.8rem;
+}
+
+.container-categorie .food-or-drink-card {
+  padding: 1rem;
+}
+
+.container-categorie img.food-or-drink {
+  width: 20rem;
+  height: 10rem;
+  margin: 1rem auto;
+}
+
+p.informative-message {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+}
+
+input[type=checkbox] {
+  width: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+span.qtd-order {
+  width: 2rem;
+  text-align: center;
+  border: 0.1rem solid rgba(33, 37, 41, 0.75);
+}
+
+div.container footer.footer div a {
+  color: #fff;
+}
+
+button.btn-small:hover {
+  background-color: #ff4500;
+  color: #fff;
 }

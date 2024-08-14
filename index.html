@@ -11,91 +11,102 @@
   <header class="p-3 mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-        </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Customers</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
+        <ul class="nav-menu nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0">
+          <li><a href="/" class="title nav-link px-2">LanchoTudo</a></li>
+          <li><a href="#" class="nav-link px-2">Saiba mais</a></li>
+          <li><a href="#" class="nav-link px-2">Fale conosco</a></li>
+          <li><a href="#" class="nav-link px-2">Configurações de pedido</a></li>
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        <form class="form-search col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Digite sua pesquisa..." aria-label="Search">
+          <button class="btn-search btn btn-sm btn-outline-secondary" type="submit">Pesquisar</button>
         </form>
 
-        <div class="shopping-cat mb-lg-0 me-lg-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <div class="shopping-cart mb-lg-0 me-lg-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
           </svg>
 
-          <span>Counter: 0</span>
+          <span class="cart-without-elements">0</span>
         </div>
 
         <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target=".dropdown-menu">
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Pedido</a></li>
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configurações de Conta</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="#">Sair</a></li>
           </ul>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="album py-5 bg-body-tertiary">
-    <div class="container">
+  <div class="food-or-drink-options album py-5">
+    <div class="container container-cart-and-categories">
+      <button type="button" class="button-add-to-cart btn btn-sm btn-outline-secondary">Adicionar items marcados ao carrinho</button>
       <div class="container-categorie">
-        <h3>Categoria da comida</h3>
+        <h3>Sanduíches</h3>
         <div class="container-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/x-tudo.jpg" alt="Imagem do sanduíche X-tudo.">
+              <h3>X-Tudo</h3>
+              <p class="card-text">O X-Tudo é o nosso sanduíche mais completo e popular. Ele vem recheado com hambúrguer, queijo, presunto, bacon, ovo, alface, tomate, milho, batata palha e maionese. É uma refeição completa dentro de um pão, perfeito para quem quer matar a fome com muito sabor e variedade.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 19,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/sanduiche-de-frango.jpg" alt="Imagem do sanduíche de frango.">
+              <h3>Sanduíche de Frango</h3>
+              <p class="card-text">Nosso sanduíche de frango é uma opção leve e saborosa. Ele é feito com filé de frango grelhado, queijo derretido, alface fresquinha, tomate e maionese, tudo isso em um pão macio. É uma escolha perfeita para quem busca algo mais saudável, mas sem abrir mão do sabor.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 14,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/hamburguer-de-siri.jpg" alt="Imagem do hambúrguer de siri.">
+              <h3>Hambúrguer de Siri</h3>
+              <p class="card-text">Este aqui é o famoso hambúrguer de siri, digno de um prato servido no Siri Cascudo! Feito com carne de siri de verdade, temperada e moldada para recriar o sabor daquele que só o Bob Esponja saberia preparar. Ele vem com alface crocante, tomate suculento em um pão levemente tostado.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 24,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
@@ -103,49 +114,61 @@
       </div>
 
       <div class="container-categorie">
-        <h3>Categoria da comida</h3>
+        <h3>Bebidas</h3>
         <div class="container-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/suco-de-laranja.jpeg" alt="Imagem do suco de laranja.">
+              <h3>Suco de Laranja</h3>
+              <p class="card-text">Nosso suco de laranja é feito na hora, usando apenas laranjas frescas e maduras, garantindo um sabor naturalmente doce e refrescante. É a escolha perfeita para acompanhar qualquer lanche, trazendo aquele toque cítrico e revitalizante. Além de delicioso, é uma opção saudável e cheia de vitamina C.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 3,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/cajuina.jpeg" alt="Imagem do refrigerante de cajuína.">
+              <h3>Cajuína</h3>
+              <p class="card-text">O refrigerante de cajuína é uma versão mais refrescante e borbulhante da tradicional cajuína. Ele combina o sabor autêntico e doce do caju com o gás que deixa tudo mais leve e agradável. É perfeito para quem quer um toque de Nordeste com a refrescância de um refrigerante.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 2,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/coca-zero.jpg" alt="Imagem do refrigerante coca zero.">
+              <h3>Coca Zero</h3>
+              <p class="card-text">A Coca Zero é a opção perfeita para quem ama o sabor clássico da Coca-Cola, mas quer evitar o açúcar. Ela oferece o mesmo sabor icônico, mas com zero calorias. É ideal para acompanhar qualquer refeição ou lanche, sem pesar na consciência.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 4,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
@@ -153,107 +176,90 @@
       </div>
 
       <div class="container-categorie">
-        <h3>Categoria da comida</h3>
+        <h3>Sobremesas</h3>
         <div class="container-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/mousse-de-chocolate.jpg" alt="Imagem do mousse de chocolate.">
+              <h3>Mousse de Chocolate</h3>
+              <p class="card-text">Nosso mousse de chocolate é uma sobremesa irresistível, feita com chocolate cremoso e aerado, que derrete na boca. É leve, mas ao mesmo tempo rico em sabor, perfeito para quem quer encerrar a refeição com um toque doce e sofisticado. Se você é fã de chocolate, essa é a pedida ideal.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 9,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/doce-de-leite.jpg" alt="Imagem do doce de leite cremoso.">
+              <h3>Doce de Leite Cremoso</h3>
+              <p class="card-text">Nosso doce de leite cremoso é uma verdadeira delícia, feito com leite fresco e cozido lentamente até atingir a consistência perfeita. Ele é suave, doce na medida certa e tem aquela textura aveludada que derrete na boca. É perfeito para saborear sozinho, com frutas ou como acompanhamento para outras sobremesas.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 9,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
   
           <div class="col">
-            <div class="card shadow-sm">
-              <p>aqui vai uma imagem</p>
-              <h3>aqui vai o nome da comida</h3>
-              <p class="card-text">aqui vai a descrição.</p>
+            <div class="food-or-drink-card card shadow-sm">
+              <img class="food-or-drink" src="./images/torta-frutas-vermelhas.jpg" alt="Imagem da torta de frutas vermelhas.">
+              <h3>Torta de Frutas Vermelhas</h3>
+              <p class="card-text">A torta de frutas vermelhas é uma sobremesa deliciosa e vibrante, recheada com uma mistura fresca de morangos, framboesas e amoras, tudo em uma base de massa crocante. A combinação de frutas proporciona um sabor doce e levemente ácido, que se equilibra perfeitamente com a suavidade do recheio.</p>
+              <br>
+              <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">R$ 9,99</small>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">adicionar ao carrinho</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">remover do carrinho</button>
-                </div>
-                <small class="text-body-secondary">aqui vai o preço</small>
+                  <input type="checkbox" name="order-checked" id="order-checked">
+                  <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
+                  <span type="button" class="qtd-order">0</span>
+                  <button type="button" class="button-add-one btn-small btn btn-sm btn-outline-secondary">+1</button>
+                </div>              
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      
-
-      
     </div>
   </div>
 
   <div class="container">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <footer class="footer row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top justify-content-between">
       <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        </a>
-        <p class="text-body-secondary">&copy; 2024</p>
-      </div>
-  
-      <div class="col mb-3">
-  
+        <p>&copy; 2024</p>
       </div>
   
       <div class="col mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Atualizações</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Preços</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Sobre nós</a></li>
         </ul>
       </div>
     </footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
