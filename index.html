@@ -4,34 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./menu.css">
   <title>Cardápio restaurante</title>
 </head>
 <body>
+
   <header class="p-3 mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
+  
         <ul class="nav-menu nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0">
-          <li><a href="/" class="title nav-link px-2">LanchoTudo</a></li>
+          <li><a href="index.html" class="title nav-link px-2">LanchoTudo</a></li>
           <li><a href="#" class="nav-link px-2">Saiba mais</a></li>
           <li><a href="#" class="nav-link px-2">Fale conosco</a></li>
           <li><a href="#" class="nav-link px-2">Configurações de pedido</a></li>
         </ul>
-
+  
         <form class="form-search col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <input type="search" class="form-control" placeholder="Digite sua pesquisa..." aria-label="Search">
           <button class="btn-search btn btn-sm btn-outline-secondary" type="submit">Pesquisar</button>
         </form>
-
+  
         <div class="shopping-cart mb-lg-0 me-lg-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
           </svg>
-
+  
           <span class="cart-without-elements">0</span>
         </div>
-
+  
         <div class="dropdown text-end">
           <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target=".dropdown-menu">
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
@@ -51,6 +53,7 @@
   <div class="food-or-drink-options album py-5">
     <div class="container container-cart-and-categories">
       <button type="button" class="button-add-to-cart btn btn-sm btn-outline-secondary">Adicionar items marcados ao carrinho</button>
+      <button type="button" class="button-go-to-cart button-add-to-cart btn btn-sm btn-outline-secondary">Ir para o carrinho</button>
       <div class="container-categorie">
         <h3>Sanduíches</h3>
         <div class="container-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -62,7 +65,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 19,99</small>
+                <small class="text-body-secondary">R$ 19.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -81,7 +84,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 14,99</small>
+                <small class="text-body-secondary">R$ 14.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -100,7 +103,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 24,99</small>
+                <small class="text-body-secondary">R$ 24.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -124,7 +127,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 3,99</small>
+                <small class="text-body-secondary">R$ 3.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -143,7 +146,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 2,99</small>
+                <small class="text-body-secondary">R$ 2.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -162,7 +165,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 4,99</small>
+                <small class="text-body-secondary">R$ 4.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -186,7 +189,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 9,99</small>
+                <small class="text-body-secondary">R$ 9.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -205,7 +208,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 9,99</small>
+                <small class="text-body-secondary">R$ 9.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -224,7 +227,7 @@
               <br>
               <p class="informative-message">Marque o checkbox, escolha quantos pedidos quer, adicione ao carrinho e divirta-se!</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">R$ 9,99</small>
+                <small class="text-body-secondary">R$ 9.99</small>
                 <div class="btn-group">
                   <input type="checkbox" name="order-checked" id="order-checked">
                   <button type="button" class="button-remove-one btn btn-sm btn-outline-secondary">-1</button>
@@ -240,16 +243,16 @@
     </div>
   </div>
 
-  <div class="container">
+  <div id="footer" class="container">
     <footer class="footer row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top justify-content-between">
       <div class="col mb-3">
         <p>&copy; 2024</p>
       </div>
-  
+    
       <div class="col mb-3">
         <h5>Section</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/" class="nav-link p-0">Home</a></li>
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0">Home</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Atualizações</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Preços</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">FAQs</a></li>
@@ -259,7 +262,7 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

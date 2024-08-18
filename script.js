@@ -1,4 +1,21 @@
 (function start() {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+  if(cartItems) {
+    const shoppingCartSVG = document.querySelector('.shopping-cart')
+    const qtdShoppingCart = shoppingCartSVG.lastElementChild
+
+    qtdShoppingCart.classList.add('cart-with-elements')
+
+    let qtdTotalOrders = 0
+
+    for(item of cartItems) {
+      qtdTotalOrders += item.quantity
+    }
+
+    qtdShoppingCart.textContent = qtdTotalOrders
+  }
+
   document.addEventListener('click', (event) => {
     const tag = event.target
 
@@ -6,22 +23,68 @@
     const qtdShoppingCart = shoppingCartSVG.lastElementChild
 
     const ordersCheckbox = document.querySelectorAll('#order-checked')
+    const shoppingCart = []
+    let cartItems = null
+    let qtdOrder = 0
     
     if(tag.classList[0] === 'button-add-to-cart') {
-      qtdShoppingCart.classList.add('cart-with-elements')
-      const shoppingCart = []
+      ordersCheckbox.forEach(orderCheckbox => {
+        if (orderCheckbox.checked === true) {
+          const orderName = orderCheckbox.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent
 
-      ordersCheckbox.forEach(orderCheck => {
-        if (orderCheck.checked === true) {
-          const orderName = orderCheck.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent
+          const orderPriceTag = orderCheckbox.parentElement.parentElement.firstElementChild
+          const orderPrice = orderPriceTag.textContent
 
-          const orderPrice = orderCheck.parentElement.parentElement.firstElementChild.textContent
+          qtdOrder = Number(orderPriceTag.nextElementSibling.children[2].textContent)
 
-          shoppingCart.push({ name: orderName, price: orderPrice })
+          if(qtdOrder === 0) {
+            alert("Escolha ao menos 1 unidade do pedido selecionado para adicionar ao carrinho!")
+            return
+          }
+
+          cartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+          if(cartItems) {
+            cartItems.push({ name: orderName, price: orderPrice, quantity: qtdOrder })
+          } else {
+            shoppingCart.push({ name: orderName, price: orderPrice, quantity: qtdOrder })
+          }
         }
       })
 
-      console.log(shoppingCart)
+      if(shoppingCart.length > 0) {
+        qtdShoppingCart.classList.add('cart-with-elements')
+
+        let qtdTotalOrders = 0
+
+        for(item of shoppingCart) {
+          qtdTotalOrders += item.quantity
+        }
+
+        qtdShoppingCart.textContent = qtdTotalOrders
+
+        const cartItems = JSON.parse(localStorage.getItem('cartItems'))
+
+        if(cartItems) {
+          cartItems.push
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(shoppingCart))
+      }
+
+      if(cartItems) {
+        qtdShoppingCart.classList.add('cart-with-elements')
+
+        let qtdTotalOrders = 0
+
+        for(item of cartItems) {
+          qtdTotalOrders += item.quantity
+        }
+
+        qtdShoppingCart.textContent = qtdTotalOrders
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
+      }
     }
 
     if(tag.classList[0] === 'button-add-one') {
@@ -37,6 +100,10 @@
 
       qtdNumber--
       qtdOrders.innerText = qtdNumber
+    }
+
+    if(tag.classList[0] === 'button-go-to-cart') {
+      document.location = 'shopping-cart.html'
     }
   })
 })()
